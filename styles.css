@@ -1,0 +1,121 @@
+@font-face{
+    font-family: productSans;
+    src : url(sans.woff);
+}
+html,body{
+    background:#fafafa;
+    text-align: center;
+    font-family: productSans;
+    margin:0;
+}
+/* header content */
+.header{
+    color:white;
+    padding:10px;
+    margin:0;
+    background:#404040;
+}
+/* Main Content */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.top{
+    margin:0;
+    margin-top:20px;
+    width:500px;
+    color:white;
+    font-size:20px;
+    background: #bcbcbc;
+    border-radius: 2px;
+    padding:20px;
+}
+.range{
+    margin:0;
+    width:500px;
+    padding:20px;
+    color:white;
+    background:#ababab;
+}
+
+/* Generate Button */
+.main-container button{
+    padding:20px;
+    width:540px;
+    margin:0;
+    border:0;
+    cursor: pointer;
+    outline: none;
+}
+.main-container button:hover{
+    background: grey;
+    color: white;
+}
+/* Secondary Container */
+.secondary-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:540px;
+    padding:20px;
+}
+.secondary-container input{
+    border:none;
+    outline:none;
+    padding:20px;
+    font-size:18px;
+    width:500px;
+}
+.secondary-container button{
+    padding:20px;
+}
+/* #copy{
+    width:20px;
+    height:20px;
+} */
+
+::selection{
+    color:white;
+    background: #ababab;
+}
+
+/* Slider Properties */
+  
+  #range {
+    width: 30%;
+    height: 10px;
+    border-radius: 5px;
+    background-image: gray;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    -webkit-appearance: none;
+  }
+  
+  #range::-webkit-slider-thumb {
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background: black;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 0 -4px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  
+  #range::-moz-range-thumb {
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background: black;
+      background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 0 -4px;
+  
+    cursor: pointer;
+    -moz-appearance: none;
+  }

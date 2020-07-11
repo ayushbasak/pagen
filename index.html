@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"  type = "image/png" href="images/p_icon.png">
+    <title>𝓹𝓪𝓰𝓮𝓷</title>
+</head>
+<body>
+    <div class = "header">
+        <p>𝓹𝓪𝓰𝓮𝓷 made with ❤ by ayushbasak</p>
+    </div>
+    <div class = "main-container">
+        <p class = "top">Generate Alphanumeric Passwords</p>
+        <div class= "range">
+            <p>Choose a size between 8 and 16 characters</p>
+            <input type="range" name="Range" id="range" min = "8" max ="16" value ="8">
+        </div>
+        
+        
+        <button class = "button" id = "generate">Generate</button>
+        <div class = "secondary-container">
+            <input type="text" name="password" id="text" placeholder = "generated password here">
+            <button id = "copy">
+                COPY
+                <!-- <img id = "copy" src="images/copy.png" alt="copy"> -->
+            </button>
+        </div>
+        
+    </div>
+</body>
+<script>
+    var range = document.getElementById("range");
+    var text = document.getElementById("text");
+    var generate = document.getElementById("generate");
+    var copy = document.getElementById("copy");
+
+    let list = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    generate.addEventListener("click",()=>{
+        word = "";
+        for(i=0;i<parseInt(range.value);i++){
+            word += list[Math.floor(Math.random()*62)];
+        }
+        text.value = word;
+    });
+    copy.addEventListener("click",()=>{
+        text.select();
+        document.execCommand("copy");
+
+        copy.innerText = "COPIED"
+        setTimeout(()=>{
+            copy.innerText = "COPY";
+        },400);
+    });
+</script>
+</html>
